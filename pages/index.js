@@ -51,12 +51,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Starquest Create Images With OpenAI DALL-E 2</title>
+        <title>Starquest DALL-E 2</title>
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Create images with <span className={styles.titleColor}>DALL-E 2</span>
+          Starquest Create images with <span className={styles.titleColor}>DALL-E 2</span>
         </h1>
         <p className={styles.description}>
           <input

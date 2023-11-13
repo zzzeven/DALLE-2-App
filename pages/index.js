@@ -8,7 +8,7 @@ import axios from "axios";
 export default function Home() {
   const [token, setToken] = useState("");
   const [prompt, setPrompt] = useState("");
-  const [number, setNumber] = useState(9);
+  const [number, setNumber] = useState(3);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Images With DALL-E 2 App</title>
+        <title>Starquest Create Images With OpenAI DALL-E 2</title>
       </Head>
 
       <main className={styles.main}>

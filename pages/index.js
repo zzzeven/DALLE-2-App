@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 
 export default function Home() {
-  const [token, setToken] = useState("");
   const [prompt, setPrompt] = useState("");
   const [number, setNumber] = useState(3);
   const [results, setResults] = useState([]);
@@ -14,11 +13,11 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   function getImages() {
-    if (token != "" && prompt != "") {
+    if ( prompt != "") {
       setError(false);
       setLoading(true);
       axios
-        .post(`/api/images?t=${token}&p=${prompt}&n=${number}`)
+        .post(`/api/images?p=${prompt}&n=${number}`)
         .then((res) => {
           setResults(res.data.result);
           setLoading(false);
@@ -59,13 +58,7 @@ export default function Home() {
           Starquest Create images with <span className={styles.titleColor}>DALL-E 2</span>
         </h1>
         <p className={styles.description}>
-          <input
-            id="token"
-            type="text"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Bearer Token (sk-...)"
-          />
+
           <input
             id="prompt"
             type="text"

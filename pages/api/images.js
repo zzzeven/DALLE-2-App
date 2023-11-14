@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
   const response = await openai.images.generate({
     prompt: req.query.p,
-    model: dall-e-3,
+    model: dall-e-2,
     n: parseInt(req.query.n),
     size: "1024x1024",
   });
